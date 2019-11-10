@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <!--Meta-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Paweł Kapica">
+        <meta name="description" content="W tym miejscu wyrazisz swoją opinię na nasz temat">
+        <meta name="keywords" content="ogród, opinie, projekt">
+
+        <!--CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+        <!--Font-->
+        <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+
+        <title>Opinie</title>
+    </head>
+    <body>
+        <section id="navigation">
+            <nav id="navbarr" class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
+                <a class="navbar-brand p-3" href="#">Ogrody Marzeń</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>        
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Strona Główna<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="opinie.html">Opinie</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="kontakt.html">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <section id="intro">
+            <div class="container">
+                <div class=" jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-6">Najpiękniejsze ogrody</h1>
+                        <p class="lead pl-5">Zaufaj najlepszym !</p>
+                    </div>
+                </div>
+            </div>
+            <div id="effect"></div>
+        </section>
+        <section id="opinion">
+            <div class="container">
+                <h2 class="h1-responsive font-weight-bold text-center my-4">Opinie</h2>
+                <p class="text-center w-responsive mx-auto mb-5">W tym miejscu możesz napisać co o nas sądzisz. Możesz maksymalnie dodać jedną opinie.</p>
+                <div id="opinia"></div>
+                <div class="row" id="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="well well-sm">
+                            <form class="form-horizontal" method="get" onSubmit="zapisz();">
+                                <fieldset>
+                                    <!-- Imie -->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="name">Imię</label>
+                                        <div class="col-md-9">
+                                            <input id="name" name="name" type="text" placeholder="Imię" class="form-control" onblur="sprawdzPole('name',name_reg)" required pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ]{2,20}$">
+                                            <div class="valid-feedback">
+                                                Dobrze!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Wprowadz prawdziwe imie
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Nazwisko -->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="lastname">Nazwisko</label>
+                                        <div class="col-md-9">
+                                            <input id="lastname" name="lastname" type="text" placeholder="Nazwisko" class="form-control" onblur="sprawdzPole('lastname',lastname_reg)" required pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ]{2,40}$">
+                                            <div class="valid-feedback">
+                                                Dobrze!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Wprowadz prawdziwe nazwisko
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Wiadomość -->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="message">Twoja opinia</label>
+                                        <div class="col-md-9">
+                                            <textarea class="form-control" id="message" name="message" minlength="10" placeholder="Tutaj napisz coś o nas..." rows="5" onblur="sprawdzPole('message',message_reg)" required></textarea>
+                                            <div class="valid-feedback">
+                                                Dobrze!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Wprowadz wiadomość (minimum 10 znaków)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Opinia -->
+                                    <div class="ml-3 mb-2">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="polecam" name="opinions" class="custom-control-input" value="Polecam" onblur="sprawdzPole('radio',name_reg)" required>
+                                            <label class="custom-control-label" for="polecam">Polecam</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="niePolecam" name="opinions" class="custom-control-input" value="Nie polecam" onblur="sprawdzPole('radio',name_reg)">
+                                            <label class="custom-control-label" for="niePolecam">Odradzam</label>
+                                        </div>
+                                    </div>
+                                    <!-- Przycisk -->
+                                    <div class="form-group">
+                                        <div class="col-md-12 text-left">
+                                            <button type="submit" onclick="sprawdzPole('allOpinion',all)" class="btn btn-primary btn-lg">Wyślij</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="container-fluid p-4">
+                <div class="container">
+                    <p>Strona stworzona przez Pawła Kapicę &copy;</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!--JavaScript -->
+        <script src="js/onscroll.js"></script>
+        <script src="js/opinion.js"></script>
+        <script src="js/check.js"></script>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

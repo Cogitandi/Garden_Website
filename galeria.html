@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <!--Meta-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Paweł Kapica">
+        <meta name="description" content="Nasza galeria. Tutaj zobaczysz prace wykonane przez nas">
+        <meta name="keywords" content="ogród, galeria, projekt">
+
+        <!--CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+        <!--Font-->
+        <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+
+        <title>Galeria</title>
+    </head>
+    <body>
+        <section id="navigation">
+            <nav id="navbarr" class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
+                <a class="navbar-brand p-3" href="#">Ogrody Marzeń</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>        
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Strona Główna<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="opinie.html">Opinie</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="kontakt.html">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <section id="intro">
+            <div class="container">
+                <div class=" jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-6">Najpiękniejsze ogrody</h1>
+                        <p class="lead pl-5">Zaufaj najlepszym !</p>
+                    </div>
+                </div>
+            </div>
+            <div id="effect"></div>
+        </section>
+        <section id="gallery">
+            <div class="container">
+                <h2 class="h1-responsive font-weight-bold text-center my-4">Przykłady naszych prac</h2>
+
+                <div id="jssor_1">
+                    <div data-u="loading" class="jssorl-009-spin">
+                        <img src="img/spin.svg" alt="image load"/>/>
+                    </div>
+                    <div data-u="slides" class="slides">
+                        <div>
+                            <img data-u="image" src="img/1.jpg" alt="image 1"/>
+                            <div data-u="thumb">Realizacja ogrodu w Parczewie</div>
+                        </div>
+                        <div>
+                            <img data-u="image" src="img/2.jpg" alt="image 2"/>
+                            <div data-u="thumb">"Zielona ścieżka"</div>
+                        </div>
+                        <div>
+                            <img data-u="image" src="img/3.jpg" alt="image 3"/>
+                            <div data-u="thumb">Bazujemy na wielu gatunkach drzew</div>
+                        </div>
+                        <div>
+                            <img data-u="image" src="img/4.jpg" alt="image 4"/>
+                            <div data-u="thumb">W swoich realizacjach nie zapominamy o rzeźbach</div>
+                        </div>
+                        <div>
+                            <img data-u="image" src="img/5.jpg" alt="image 5"/>
+                            <div data-u="thumb">Taras z widokiem</div>
+                        </div>
+                        <div>
+                            <img data-u="image" src="img/6.jpg" alt="image 5"/>
+                            <div data-u="thumb">Efekt naszych prac nigdy się nie nudzi</div>
+                        </div>
+
+                    </div>
+                    <div data-u="thumbnavigator" class="thumbnav">
+                        <div data-u="slides">
+                            <div data-u="prototype" class="prot">
+                                <div data-u="thumbnailtemplate" class="thumbtemp"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Arrow Navigator -->
+                    <div data-u="arrowleft" id="arrowleft" class="jssora061"  data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                        <svg viewbox="0 0 16000 16000">
+                            <path class="a" d="M11949,1919L5964.9,7771.7c-127.9,125.5-127.9,329.1,0,454.9L11949,14079"></path>
+                        </svg>
+                    </div>
+                    <div data-u="arrowright" id="arrowright" class="jssora061"  data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                        <svg viewbox="0 0 16000 16000">
+                            <path class="a" d="M5869,1919l5984.1,5852.7c127.9,125.5,127.9,329.1,0,454.9L5869,14079"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="container-fluid p-4">
+                <div class="container">
+                    <p>Strona stworzona przez Pawła Kapicę &copy;</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!--JavaScript -->
+        <script src="js/onscroll.js"></script>
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/jssor.slider-27.5.0.min.js"></script>
+        <script src="js/slider.js"></script>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
